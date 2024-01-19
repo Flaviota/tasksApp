@@ -15,14 +15,12 @@ interface PersonService {
         @Field("password") password: String
     ): Call<PersonModel>
 
-    @POST("Authentication/Login")
+    @POST("Authentication/Create")
     @FormUrlEncoded
     fun create(
         @Field("name") name: String,
         @Field("email") email: String,
         @Field("password") password: String
-
     ): Call<PersonModel>
-
 
 }
